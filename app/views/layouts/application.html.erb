@@ -27,18 +27,18 @@
                         <%= current_user.name %>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Panel administrador</a>
-                        <a class="dropdown-item" href="#">Crear post</a>
-                        <a class="dropdown-item">
-                            <%= link_to('Cerrar sesion', destroy_user_session_path, method: :delete) %>
-                        </a>
+                        <%= link_to "Panel de control", houses_path , :class => "dropdown-item" %>
+                        <%= link_to 'Crear post', new_house_path, :class => "dropdown-item" %>
+                        <%= link_to "Cerrar sesion", destroy_user_session_path, method: :delete, 
+                         :class => "dropdown-item" %>
                     </div>
                     
                     <% else %>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#"><%= link_to('Login', new_user_session_path) %></span></a>
+                    <%= link_to "Iniciar sesion", new_user_session_path, :class => "nav-link" %>
                     </li>
                     <% end %>
+
                 </li>
             </ul>
         </div>
