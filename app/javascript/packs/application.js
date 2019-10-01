@@ -7,6 +7,11 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+//require("packs/jquery.min.js")
+//require("packs/jquery.zoom.min.js")
+require("packs/main.js")
+require("packs/nouislider.min.js")
+require("packs/slick.min.js")
 
 import 'bootstrap'
 import './src/application.scss'
