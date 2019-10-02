@@ -13,8 +13,4 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
 
-Rails.application.config.assets.precompile += %w( slick.css )
-Rails.application.config.assets.precompile += %w( slick-theme.css )
-Rails.application.config.assets.precompile += %w( nouislider.min.css )
-Rails.application.config.assets.precompile += %w( font-awesome.min.css )
-Rails.application.config.assets.precompile += %w( style.css )
+Rails.application.config.assets.precompile += %w( custom.css )
