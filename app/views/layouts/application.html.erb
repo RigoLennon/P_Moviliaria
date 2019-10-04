@@ -18,7 +18,9 @@
 <header class="header">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <!--<a class="navbar-brand" href="#">Mobiliaria</a>-->
-	  <%= image_tag ("logo.png") %>
+      <%= link_to root_path do %>
+	      <%= link_to image_tag ("logo.png") %>
+      <% end %>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -30,7 +32,7 @@
         <ul class="navbar-nav ml-auto">
 			<% if user_signed_in? %>
 				<li class="nav-item">
-					<a class="nav-link ">Bienvenido, <%= current_user.name %> </a>
+					<a class="nav-link">Bienvenido, <%= current_user.username %> </a>
 				</li>
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle btn btn-sm btn-outline-secondary" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
