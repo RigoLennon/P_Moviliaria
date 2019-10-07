@@ -1,0 +1,27 @@
+<h1>hola</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  
+
+  <tbody>
+    <% House.all.each do |house| %>
+      <tr>
+        <td><%= house.title %></td>
+        <td><%= house.description %></td>
+        <td><%= house.price %></td>
+        <td><%= link_to 'Show', house %></td>
+        <td><%= link_to 'Edit', edit_house_path(house) %></td>
+        <td><%= link_to 'Destroy', house, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
