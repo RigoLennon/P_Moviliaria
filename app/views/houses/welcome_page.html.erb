@@ -18,6 +18,9 @@
         <td><%= house.title %></td>
         <td><%= house.description %></td>
         <td><%= house.price %></td>
+        <!--<td><%= house.image %></td>-->
+        <!--<%= image_tag house.image.variant(resize_to_fit: [300,200]) %>-->
+        <td><%= house.image.attach(params[:image]) %></td>
         <td><%= link_to 'Show', house %></td>
         <td><%= link_to 'Edit', edit_house_path(house) %></td>
         <td><%= link_to 'Destroy', house, method: :delete, data: { confirm: 'Are you sure?' } %></td>
