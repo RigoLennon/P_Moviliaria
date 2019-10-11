@@ -39,8 +39,8 @@
 					Panel de control
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-					<a class="dropdown-item" href="#">Crear post</a>
-					<a class="dropdown-item" href="#">Ver todo</a>
+          <%= link_to 'Nuevo Post', new_house_path, class: "dropdown-item" %>
+          <%= link_to 'Ver todo', houses_url, class: "dropdown-item" %>
 					<div class="dropdown-divider"></div>
 					<%= link_to "Cerrar sesion", destroy_user_session_path, method: :delete, 
                          :class => "dropdown-item" %> 
