@@ -8,6 +8,7 @@
 </style>
 <!-- End Custom Styles -->
 
+<!-- Slider -->
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -36,8 +37,11 @@
   </a>
 </div>
 
+<!-- End Slider -->
+
 <br>
 
+<!-- Most Popular Houses -->
 <div class="container">
 <h2>Casas mas populares</h2>
   <div class="card-deck">
@@ -110,9 +114,11 @@
   </div>
 </div>
 
+<!-- End Most Popular Houses -->
+
 <br>
 
-
+<!-- Most View Houses -->
 <div class="container">
 <h2>Casas mas vistas</h2>
   <div class="card-deck">
@@ -182,5 +188,12 @@
     </div>
   </div>
   <% end %>
-  </div>
+</div>
+  <!-- End Most View Houses -->
+
+
+  <% @most_popular do |house| %>
+    <%= house.title %>
+  <% end %>
+
 </div>
